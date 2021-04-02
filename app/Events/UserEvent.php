@@ -9,19 +9,21 @@ use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
+use App\Models\User;
 
-class PublicMessage implements ShouldBroadcast
+class UserEvent implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
+    public $user;
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(User $user)
     {
-        //
+        $this->user = $user;
     }
 
     /**
@@ -31,14 +33,14 @@ class PublicMessage implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('message-channel');
+        return new PrivateChannel('user.'.$this->user->id);
     }
 
     public function broadcastAs(){
-        return 'MessageEvent';
+        return 'UserEvent';
     }
 
     public function broadcastWith(){
-        return ['message' => 'Esta notificación es un mensaje público'];
+        return ['user' => $this->user];
     }
 }

@@ -15,13 +15,14 @@ class PrivateMessage implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
+
+    private $user;
+
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    private $user;
-
     public function __construct(User $user)
     {
         $this->user = $user;
@@ -34,6 +35,14 @@ class PrivateMessage implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('message-channel'.$this->user->id);
+        return new PrivateChannel('message-channel'.$this->usaer->id);
+    }
+
+    public function broadcastAs(){
+        return 'MessageEventPrivate';
+    }
+
+    public function broadcastWith(){
+        return ['message' => 'Esta notificación es un mensaje privado'];
     }
 }
