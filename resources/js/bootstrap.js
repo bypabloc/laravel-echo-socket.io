@@ -22,7 +22,9 @@ import Echo from 'laravel-echo';
 
 window.Echo = new Echo({
     broadcaster: 'socket.io',
-    host: process.env.MIX_APP_URL + ':6001',
+    host: '//' + process.env.MIX_APP_URL + ':6001',
+    // host: '//laravel-echo-socket.io.prueba:6001',
+    // host: `//${process.env.MIX_APP_URL}:6001`,
     // host: `${window.location.hostname}:${window.laravelEchoPort}`,
     // host: window.location.hostname + ':6001',
     // transports: ['websocket'],

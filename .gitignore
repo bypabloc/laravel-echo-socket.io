@@ -16,3 +16,5 @@ yarn-error.log
 /bootstrap/cache/config.php
 composer.lock
 package-lock.json
+sslCert.crt
+sslKey.key
