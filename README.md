@@ -56,42 +56,43 @@ Para levantar el servicio ejecutar:
     ```src/redis-server```
 
 Nos aparecera en la consola algo como lo siguiente:
+    ```
+    318699:C 01 Apr 2021 21:10:23.090 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+    318699:C 01 Apr 2021 21:10:23.090 # Redis version=6.2.1, bits=64, commit=00000000, modified=0, pid=318699, just started
+    318699:C 01 Apr 2021 21:10:23.090 # Warning: no config file specified, using the default config. In order to specify a config file use src/redis-server /path/to/redis.conf
+    318699:M 01 Apr 2021 21:10:23.092 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+    318699:M 01 Apr 2021 21:10:23.092 * monotonic clock: POSIX clock_gettime
+                    _._                                                  
+            _.-``__ ''-._                                             
+        _.-``    `.  `_.  ''-._           Redis 6.2.1 (00000000/0) 64 bit
+    .-`` .-```.  ```\/    _.,_ ''-._                                   
+    (    '      ,       .-`  | `,    )     Running in standalone mode
+    |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
+    |    `-._   `._    /     _.-'    |     PID: 318699
+    `-._    `-._  `-./  _.-'    _.-'                                   
+    |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+    |    `-._`-._        _.-'_.-'    |           http://redis.io        
+    `-._    `-._`-.__.-'_.-'    _.-'                                   
+    |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+    |    `-._`-._        _.-'_.-'    |                                  
+    `-._    `-._`-.__.-'_.-'    _.-'                                   
+        `-._    `-.__.-'    _.-'                                       
+            `-._        _.-'                                           
+                `-.__.-'                                               
 
-> 318699:C 01 Apr 2021 21:10:23.090 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-> 318699:C 01 Apr 2021 21:10:23.090 # Redis version=6.2.1, bits=64, commit=00000000, modified=0, pid=318699, just started
-> 318699:C 01 Apr 2021 21:10:23.090 # Warning: no config file specified, using the default config. In order to specify a config file use src/redis-server /path/to/redis.conf
-> 318699:M 01 Apr 2021 21:10:23.092 * Increased maximum number of open files to 10032 (it was originally set to 1024).
-> 318699:M 01 Apr 2021 21:10:23.092 * monotonic clock: POSIX clock_gettime
->                 _._                                                  
->         _.-``__ ''-._                                             
->     _.-``    `.  `_.  ''-._           Redis 6.2.1 (00000000/0) 64 bit
-> .-`` .-```.  ```\/    _.,_ ''-._                                   
-> (    '      ,       .-`  | `,    )     Running in standalone mode
-> |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
-> |    `-._   `._    /     _.-'    |     PID: 318699
-> `-._    `-._  `-./  _.-'    _.-'                                   
-> |`-._`-._    `-.__.-'    _.-'_.-'|                                  
-> |    `-._`-._        _.-'_.-'    |           http://redis.io        
-> `-._    `-._`-.__.-'_.-'    _.-'                                   
-> |`-._`-._    `-.__.-'    _.-'_.-'|                                  
-> |    `-._`-._        _.-'_.-'    |                                  
-> `-._    `-._`-.__.-'_.-'    _.-'                                   
->     `-._    `-.__.-'    _.-'                                       
->         `-._        _.-'                                           
->             `-.__.-'                                               
-> 
-> 318699:M 01 Apr 2021 21:10:23.094 # Server initialized
-> 318699:M 01 Apr 2021 21:10:23.094 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-> 318699:M 01 Apr 2021 21:10:23.094 * Loading RDB produced by version 6.2.1
-> 318699:M 01 Apr 2021 21:10:23.094 * RDB age 2 seconds
-> 318699:M 01 Apr 2021 21:10:23.094 * RDB memory usage when created 0.85 Mb
-> 318699:M 01 Apr 2021 21:10:23.094 * DB loaded from disk: 0.000 seconds
-> 318699:M 01 Apr 2021 21:10:23.095 * Ready to accept connections
-> 318699:M 01 Apr 2021 21:37:49.737 * 100 changes in 300 seconds. Saving...
-> 318699:M 01 Apr 2021 21:37:49.737 * Background saving started by pid 321356
-> 321356:C 01 Apr 2021 21:37:49.739 * DB saved on disk
-> 321356:C 01 Apr 2021 21:37:49.739 * RDB: 0 MB of memory used by copy-on-write
-> 318699:M 01 Apr 2021 21:37:49.838 * Background saving terminated with success
+    318699:M 01 Apr 2021 21:10:23.094 # Server initialized
+    318699:M 01 Apr 2021 21:10:23.094 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+    318699:M 01 Apr 2021 21:10:23.094 * Loading RDB produced by version 6.2.1
+    318699:M 01 Apr 2021 21:10:23.094 * RDB age 2 seconds
+    318699:M 01 Apr 2021 21:10:23.094 * RDB memory usage when created 0.85 Mb
+    318699:M 01 Apr 2021 21:10:23.094 * DB loaded from disk: 0.000 seconds
+    318699:M 01 Apr 2021 21:10:23.095 * Ready to accept connections
+    318699:M 01 Apr 2021 21:37:49.737 * 100 changes in 300 seconds. Saving...
+    318699:M 01 Apr 2021 21:37:49.737 * Background saving started by pid 321356
+    321356:C 01 Apr 2021 21:37:49.739 * DB saved on disk
+    321356:C 01 Apr 2021 21:37:49.739 * RDB: 0 MB of memory used by copy-on-write
+    318699:M 01 Apr 2021 21:37:49.838 * Background saving terminated with success
+    ```
 
 
 Si genera algun error solo debe buscar liberar el puerto o cambiarlo en la configuracion.
