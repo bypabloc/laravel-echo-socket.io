@@ -14,7 +14,9 @@ Copiar el contenido del archivo '.env.example' en el archivo anteriormente cread
 
 Indicar la URL del proyecto en la propiedad 'APP_URL'
 
-NOTA: no saltarse el paso anterior o el siguiente dará error:
+Crear la base de datos llamada, en nuestro caso, 'laravel_echo_socket_io'
+
+NOTA: no saltarse los pasos anteriores o el siguiente comando dará error
 
 El siguiente comando ejecutará un script que instalará todos los archivos necesarios
 
