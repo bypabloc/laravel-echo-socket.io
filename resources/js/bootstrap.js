@@ -18,10 +18,12 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 import Echo from 'laravel-echo';
 
+// window.io = require('socket.io-client');
+
 window.Echo = new Echo({
     broadcaster: 'socket.io',
     host: process.env.MIX_APP_URL + ':6001',
     // host: `${window.location.hostname}:${window.laravelEchoPort}`,
     // host: window.location.hostname + ':6001',
-    transports: ['websocket'],
+    // transports: ['websocket'],
  });

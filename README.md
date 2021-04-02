@@ -51,7 +51,8 @@ Para levantar el servicio ejecutar:
 
 Nos aparecera en la consola algo como lo siguiente:
 
-![redis-server](https://i.stack.imgur.com/3nF86.png)
+![redis-server](public/img/redis-server.png)
+
 
 Si genera algun error solo debe buscar liberar el puerto o cambiarlo en la configuracion.
 
@@ -82,18 +83,7 @@ Para ejecutar el proyecto debemos ejecutar levantar 2 consolas:
 
     laravel-echo-server start
 
-        L A R A V E L  E C H O  S E R V E R
-
-        version 1.6.2
-
-        ⚠ Starting server in DEV mode...
-
-        ✔  Running at laravel-echo-socket.io.prueba on port 6001
-        ✔  Channels are ready.
-        ✔  Listening for http events...
-        ✔  Listening for redis events...
-
-        Server ready!
+![laravel-echo-server_start](public/img/laravel-echo-server_start.png)
 
 2 - Ejecutar las tareas que escuchen los eventos:
 
@@ -101,12 +91,7 @@ Para ejecutar el proyecto debemos ejecutar levantar 2 consolas:
 
 Si todo esta bien deberiamos poder entrar al '/dashboard' (despues de haber logueado) y la consola del 'laravel-echo-server start' mostrarnos algo como lo siguiente:
 
-    [22:44:41] - Preparing authentication request to: http://laravel-echo-socket.io.prueba
-    [22:44:41] - Sending auth request to: http://laravel-echo-socket.io.prueba/broadcasting/auth
-
-    [22:44:41] - kCC93TWjuNwQ-0BJAAAA joined channel: message-channel
-    [22:44:41] - kCC93TWjuNwQ-0BJAAAA authenticated for: private-user.1
-    [22:44:41] - kCC93TWjuNwQ-0BJAAAA joined channel: private-user.1
+![laravel-echo-server_auth](public/img/laravel-echo-server_auth.png)
 
 Abrir 2 pestañas mas:
 
@@ -116,17 +101,15 @@ Una en '/public-message' nos mostrara un msj como lo siguiente:
 
 Esto enviara el siguiente msj al dashboard:
 
-    'Esta notificación es un mensaje público'
+![dashboard_message_public](public/img/dashboard_message_public.png) 
 
 En la console de 'laravel-echo-server start' mostrarnos algo como lo siguiente:
 
-    Channel: message-channel
-    Event: MessageEvent
+![laravel-echo-server_public](public/img/laravel-echo-server_public.png)
 
 Y en la consola de 'queue:work' algo como lo siguiente:
 
-    [2021-04-02 03:47:23][GZajvUq38ZJWKo4ktGNyTo4diJ08fLIo] Processing: App\Events\PublicMessage
-    [2021-04-02 03:47:23][GZajvUq38ZJWKo4ktGNyTo4diJ08fLIo] Processed:  App\Events\PublicMessage
+![queue_work_public](public/img/queue_work_public.png)
 
 Y otra en '/user-channel' nos mostrara un msj como lo siguiente:
 
@@ -136,20 +119,21 @@ Esto enviara el siguiente msj al dashboard:
 
     'Mensaje privado al correo '
 
-Como por ejemplo:  
+Como por ejemplo: 
 
-    'Mensaje privado al correo pacg@mail.com'
+![dashboard_message_private](public/img/dashboard_message_private.png) 
 
 En la console de 'laravel-echo-server start' mostrarnos algo como lo siguiente:
 
-    Channel: private-user.1
-    Event: UserEvent
+![laravel-echo-server_private](public/img/laravel-echo-server_private.png)
 
 Y en la consola de 'queue:work' algo como lo siguiente:
 
-    [2021-04-02 03:55:41][ZZgYeThntydfO5hbVgtcLzAVvLg74CiW] Processing: App\Events\UserEvent
-    [2021-04-02 03:55:41][ZZgYeThntydfO5hbVgtcLzAVvLg74CiW] Processed:  App\Events\UserEvent
+![queue_work_private](public/img/queue_work_private.png)
 
+Si logueamos con 2 usuarios y ejecutamos los eventos, deberiamos ver un resultado como el siguiente:
+
+![dashboard_message_ambas](public/img/dashboard_message_ambas.png)
 
 
 [Tutorial para hacer este README.md](https://guides.github.com/features/mastering-markdown/)

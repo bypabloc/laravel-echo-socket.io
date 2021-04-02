@@ -9,7 +9,7 @@
     </div>
 
     {{-- http://laravel-echo-socket.io.prueba:6001/socket.io/socket.io.js --}}
-    <script src="//{{ request()->getHost() }}:6001/socket.io/socket.io.js"></script>
+    <script src="http://{{ request()->getHost() }}:6001/socket.io/socket.io.js"></script>
     <script src="{{ asset('js/app.js') }}"></script>
     <script>
         const userId = '{{ auth()->id() }}';
