@@ -110,7 +110,7 @@ Abrir 2 pestañas mas:
 
 Una en '/public-message' nos mostrara un msj como lo siguiente:
 
-    'Mensaje publico'
+    Mensaje publico
 
 Esto enviara el siguiente msj al dashboard:
 
@@ -128,12 +128,15 @@ Y en la consola de 'queue:work' algo como lo siguiente:
 
 Y otra en '/user-channel' nos mostrara un msj como lo siguiente:
 
-    'Mensaje privado al usuario ' concatenado del correo del usuario logueado
+    Mensaje privado al usuario + concatenado el correo del usuario logueado
 
 Esto enviara el siguiente msj al dashboard:
 
     'Mensaje privado al correo '
-    Como por ejemplo:  'Mensaje privado al correo pacg1991@gmail.com'
+
+Como por ejemplo:  
+
+    'Mensaje privado al correo pacg1991@gmail.com'
 
 En la console de 'laravel-echo-server start' mostrarnos algo como lo siguiente:
 
