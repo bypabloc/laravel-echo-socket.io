@@ -1,7 +1,9 @@
 /node_modules
 /public/hot
 /public/storage
+/public/js/app.js
 /storage/*.key
+laravel-echo-server.lock
 /vendor
 .env
 .env.backup
