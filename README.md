@@ -1,9 +1,33 @@
-Probado con:
-    ubuntu 20.04
-    php 8.0.3
-    node 14.16.0
-    npm 7.7.5
-    redis 6.2.1
+# laravel-echo-socket.io
+**Un proyecto para testing y config de tu servicio de socket.io con laravel**
+
+##### **Probado con**:
+
+* ubuntu 20.04
+* php 8.0.3
+* node 14.16.0
+* npm 7.7.5
+* redis 6.2.1
+
+Crear el archivo '.env'
+Copiar el contenido del archivo '.env.example' en el archivo anteriormente creado
+
+Indicar la URL del proyecto en la propiedad 'APP_URL'
+
+El siguiente comando ejecutara un script que instalará todos los archivos necesarios
+```composer run-script install```
+    
+
+
+* ```npm run serve --watch```:
+    Este comando ejecutará el server junto con la construccion del proyecto, con vigilancia de algun cambio en algun archivo y lo volverá a recontruir
+
+* ```eslint --fix .```: 
+    Si encuentra algun error en la sintaxis lo arreglará automaticamente. 
+    Para que este pueda funcionar tiene que haber instalado ```eslint``` de manera global con el comando ```npm install -g eslint```
+
+[Tutorial para hacer este README.md](https://guides.github.com/features/mastering-markdown/)
+
 
 Ejecutar comando:
     composer install
@@ -20,8 +44,7 @@ Ejecutar el siguiente comando para reiniciar la configuracion de laravel:
     php artisan config:clear
 
 Ejecutar los siguientes comandos para crear la autenticacion:
-    php artisan breeze:install
-    sudo npm install && npm run dev
+    npm install && npm run dev
 
 Crear la base de datos llamada, en nuestro caso, 'laravel_echo_socket_io' y ejecutar el siguiente comando:
     php artisan optimize
