@@ -87,7 +87,7 @@ Nos aparecera en la consola algo como lo siguiente:
 
 Si genera algun error solo debe buscar liberar el puerto o cambiarlo en la configuracion.
 
-You can interact with Redis using the built-in client:
+Puede interactuar con Redis utilizando el cliente integrado:
     $ src/redis-cli
     redis> set foo bar
     OK
@@ -95,8 +95,8 @@ You can interact with Redis using the built-in client:
     "bar"
 
 
-From the official Ubuntu PPA
-    You can install the latest stable version of Redis from the redislabs/redis package repository. Add the repository to the apt index, update it and install:
+Del PPA oficial de Ubuntu
+    Puede instalar la última versión estable de Redis desde el repositorio de paquetes redislabs / redis. Agregue el repositorio al índice de apt, actualícelo e instale:
         $ sudo add-apt-repository ppa:redislabs/redis
         $ sudo apt-get update
         $ sudo apt-get install redis
