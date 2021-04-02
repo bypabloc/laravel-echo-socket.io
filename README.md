@@ -136,7 +136,7 @@ Esto enviara el siguiente msj al dashboard:
 
 Como por ejemplo:  
 
-    'Mensaje privado al correo pacg1991@gmail.com'
+    'Mensaje privado al correo pacg@mail.com'
 
 En la console de 'laravel-echo-server start' mostrarnos algo como lo siguiente:
 
