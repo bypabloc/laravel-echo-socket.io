@@ -56,7 +56,6 @@ Para levantar el servicio ejecutar:
     ```src/redis-server```
 
 Nos aparecera en la consola algo como lo siguiente:
-    ```
     318699:C 01 Apr 2021 21:10:23.090 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
     318699:C 01 Apr 2021 21:10:23.090 # Redis version=6.2.1, bits=64, commit=00000000, modified=0, pid=318699, just started
     318699:C 01 Apr 2021 21:10:23.090 # Warning: no config file specified, using the default config. In order to specify a config file use src/redis-server /path/to/redis.conf
@@ -92,7 +91,6 @@ Nos aparecera en la consola algo como lo siguiente:
     321356:C 01 Apr 2021 21:37:49.739 * DB saved on disk
     321356:C 01 Apr 2021 21:37:49.739 * RDB: 0 MB of memory used by copy-on-write
     318699:M 01 Apr 2021 21:37:49.838 * Background saving terminated with success
-    ```
 
 
 Si genera algun error solo debe buscar liberar el puerto o cambiarlo en la configuracion.
