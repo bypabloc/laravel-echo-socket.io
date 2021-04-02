@@ -135,5 +135,62 @@ Si logueamos con 2 usuarios y ejecutamos los eventos, deberiamos ver un resultad
 
 ![dashboard_message_ambas](public/img/dashboard_message_ambas.png)
 
+Para agregar el certificado SSL solo debe modifcar las siguiente propiedades en el archivo '/laravel-echo-server.json' 
+* "authHost": agregar https
+* "protocol": agregar https
+* "sslCertPath": indicar la localicacion del archivo
+* "sslKeyPath": indicar la localicacion del archivo
 
-[Tutorial para hacer este README.md](https://guides.github.com/features/mastering-markdown/)
+Y ejecutar con permisos administradores para que pueda acceder a los archivos ssl:
+    
+    sudo laravel-echo-server start
+
+Ejemplo de un resultado de este archivo:
+
+    {
+        "authHost": "https://laravel-echo-socket.io.prueba",
+        "authEndpoint": "/broadcasting/auth",
+        "clients": [],
+        "database": "redis",
+        "databaseConfig": {
+            "redis": {},
+            "sqlite": {
+                "databasePath": "/database/laravel-echo-server.sqlite"
+            }
+        },
+        "devMode": true,
+        "host": "laravel-echo-socket.io.prueba",
+        "port": "6001",
+        "protocol": "https",
+        "socketio": {},
+        "secureOptions": 67108864,
+        "sslCertPath": "sslCert.crt",
+        "sslKeyPath": "sslKey.key",
+        "sslCertChainPath": "",
+        "sslPassphrase": "",
+        "subscribers": {
+            "http": true,
+            "redis": true
+        },
+        "apiOriginAllow": {
+            "allowCors": false,
+            "allowOrigin": "",
+            "allowMethods": "",
+            "allowHeaders": ""
+        }
+    }
+
+Sino tiene los archivos, puede simplemente puede ejecutar el siguiente comando, dentro de la carpeta del proyecto:
+
+    sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout sslKey.key -out sslCert.crt
+
+
+Recursos utilizados:
+
+[Laravel 8](https://laravel.com/docs/8.x/broadcasting)
+
+[Laravel Echo Server](https://github.com/tlaverdure/laravel-echo-server)
+
+[Cómo crear un certificado SSL autofirmado para Nginx en Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-18-04)
+
+[Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
