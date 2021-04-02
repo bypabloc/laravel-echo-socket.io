@@ -22,15 +22,9 @@ Route::get('/public-message', function () {
     return 'Mensaje publico';
 });
 
-Route::get('/private-chat', function () {
-    event(new \App\Events\PrivateMessage(auth()->user()));
-    dd('Private event executed successfully.');
-});
-
 Route::get('/user-channel', function () {
-    // event(new \App\Events\UserEvent());
     event(new \App\Events\UserEvent(auth()->user()));
-    dd('UserEvent event executed successfully.');
+    return 'Mensaje privado al usuario '.auth()->user()->email;
 });
 
 Route::get('/dashboard', function () {
